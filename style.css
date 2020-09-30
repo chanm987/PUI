@@ -1,0 +1,83 @@
+h1 {
+    font-family: 'Abhaya Libre', serif;
+    font-size: 18px;
+}
+
+h2 {
+    font-family: 'Varela', sans-serif;
+    font-size: 48px;
+}
+
+h3 {
+    font-family: 'Varela', sans-serif;
+    font-size: 36px;
+}
+
+h4 {
+    font-family: 'Varela', sans-serif;
+    font-size: 24px;
+}
+
+h5 {
+    font-family: 'Varela', sans-serif;
+    font-size: 14px;
+}
+
+h6 {
+    font-family: 'Varela', sans-serif;
+    font-size: 13px;
+}
+
+.ShippingWrapper {
+    height: 45px;
+    background-color: #C7B8AB;
+    color: white;
+    display: grid;
+    justify-content: center;
+}
+
+.NavBarWrapper {
+    height: 100px;
+    background-color: #FBF0E6;
+    display: grid;
+}
+
+.LogoImage {
+    height: 32px;
+    width: 34px;
+    position: relative;
+    top: 33px;
+    left: 61px;
+}
+
+.LogoText {
+    position: relative;
+    bottom: 15px;
+    left: 100px;
+}
+
+.NavBarSelections {
+    position: relative;
+}
+
+.BannerImage {
+    width: 1440px;
+}
+
+.NavBarSelections {
+    display: grid;
+}
+
+.PillowImage {
+    height: 315px;
+    width: 315px;
+}
+
+.ColorImage {
+    height: 315px;
+    width: 315px;
+}
+
+h4 .ShopByType {
+    float: center;
+}
