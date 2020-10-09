@@ -1,3 +1,15 @@
+/* interactioon */
+a {
+    text-decoration: none;
+    color: black;
+}
+
+#AboutUsNav {
+    text-decoration: none;
+    color: white;
+}
+
+
 /* Repeat items on each page */
 body{
     margin: 0;
@@ -670,13 +682,41 @@ form label {
     justify-self: center;
 }
 
-/* interactioon */
-a:link {
-    text-decoration: none;
-    color: black;
+/* About Us */
+
+.AboutUsHeader {
+    text-align: center;
+    margin: 0 60px;
+    border-bottom: 2px solid black;
 }
 
-a:hover {
-    text-decoration-color: black;
-    color: black;
+.AboutUsImage {
+    width: 567px;
+    height: 851px;
+    margin-bottom: 100px;
+}
+
+.AboutUsBody {
+    margin: 150px 114px;
+    display: flex;
+    flex-direction: row;
+}
+
+.AboutUsInfo {
+    margin-left: 100px;
+
+}
+
+.WhoAreWe {
+    margin-bottom: 100px;
+    text-align: justify;
+}
+
+.WhereDoWeProduce {
+    margin-bottom: 100px;
+    text-align: justify;
+}
+
+.WhyShopHere {
+    text-align: justify;
 }
