@@ -679,7 +679,7 @@ form label {
     border-top: 2px solid black;
     margin: 0 auto;
     padding-top: 50px;
-    justify-self: center;
+    text-align: center;
 }
 
 /* About Us */
