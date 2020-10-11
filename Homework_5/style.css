@@ -245,7 +245,7 @@ h6 {
     height: 115px;
     background-color: #B29B86;
     display: flex;
-    flex-direction: rows;
+    flex-direction: row;
     justify-content: center;
     color: white;
     align-items: center;
@@ -267,7 +267,7 @@ h6 {
 
 .AssortmentBody {
     display: flex;
-    flex-direction: rows;
+    flex-direction: row;
     margin-bottom: 150px;
 }
 
@@ -284,20 +284,20 @@ h6 {
 
 .AssortmentBar {
     display: flex;
-    flex-direction: rows;
+    flex-direction: row;
     justify-content: space-between;
     margin: 106px 0 20px 0;
 }
 
 .CouchPillowAssortment1 {
     display: flex;
-    flex-direction: rows;
+    flex-direction: row;
     justify-content: space-between;
 }
 
 .CouchPillowAssortment2 {
     display: flex;
-    flex-direction: rows;
+    flex-direction: row;
     justify-content: space-between;
 }
 
@@ -649,13 +649,13 @@ form label {
 
 .RightArrow {
     height: 30px;
-    weight: 30px; 
+    width: 30px; 
     align-self: center;
 }
 
 .LeftArrow {
     height: 30px;
-    weight: 30px;
+    width: 30px;
     align-self: center;
 }
 
