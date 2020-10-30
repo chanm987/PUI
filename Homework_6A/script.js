@@ -4,7 +4,8 @@ window.onload = () => {
     let Selected = {
         color: "Morning Haze",
         fill: "Memory Foam",
-        quantity: 1
+        quantity: 1,
+        price: 0
     };
 
     let BeigeChip = document.getElementById("BeigeChip");
@@ -94,10 +95,10 @@ window.onload = () => {
     let AddOne = document.getElementById("AddOne");
 
     let DecreaseOne = document.getElementById("DecreaseOne");
-    DecreaseOne.onmousedown = function() {
+    DecreaseOne.onmousedown = function () {
         DecreaseOne.style.background = "#000000";
     }
-    DecreaseOne.onmouseup = function() {
+    DecreaseOne.onmouseup = function () {
         DecreaseOne.style.background = "#888282";
     }
     DecreaseOne.onclick = function () {
@@ -112,26 +113,79 @@ window.onload = () => {
     let IncreaseOne = document.getElementById("IncreaseOne");
     console.log(IncreaseOne);
     console.log(AddOne.value)
-    IncreaseOne.onmousedown = function() {
+    IncreaseOne.onmousedown = function () {
         IncreaseOne.style.background = "#000000";
     }
-    IncreaseOne.onmouseup = function() {
+    IncreaseOne.onmouseup = function () {
         IncreaseOne.style.background = "#888282";
     }
-    IncreaseOne.onclick = function() {
+    IncreaseOne.onclick = function () {
         AddOne.innerText = parseInt(AddOne.innerText, 10) + 1;
-        Selected.quantity = parseInt(AddOne.innerText, 10) + 1;
+        Selected.quantity = parseInt(AddOne.innerText, 10);
     }
 
-
     //Add item to Cart 
+    let JuliaPillowImage = document.getElementById("JuliaPillowImage");
     let CartHasItem = document.getElementById("CartHasItem");
-    let DropDownShoppingCart = document.getElementById("DropDownShoppingCart");
+    let ShoppingCartDD = document.getElementById("ShoppingCartDD");
     let AddToCartButton = document.getElementById("AddToCartButton");
+    let ItemImageInDD = document.getElementById("ItemImageInDD");
+    let SubtotalDD = document.getElementById("SubtotalDD");
+    let QuantityDD = document.getElementById("QuantityDD");
+    let LineDD = document.getElementById("LineDD");
+    let DDMButtons = document.getElementById("DDMButtons");
+    let NothingCart = document.getElementById("NothingCart");
+    let ItemsInDD = document.getElementById("ItemsInDD");
+    let CartItemDescDD = document.getElementById("CartItemDescDD");
 
-    AddToCartButton.onclick = function() {
+
+    AddToCartButton.onclick = function (event) {
+        event.stopPropagation();
+        ShoppingCartDD.style.display = "Block";
         CartHasItem.style.display = "Block";
-        DropDownShoppingCart.style.display = "Block";
+        console.log(ItemsInDD);
+        console.log(AddOne.innerText);
+        //How many Items in Cart
+        var NumItemInDD = document.getElementById("NumItemCart");
+        NumItemInDD.innerHTML = Selected.quantity + " item(s) in your cart";
+        //Julia Pillow Renders 
+        var AddImageToDropDown = document.createElement("img");
+        AddImageToDropDown.src = "fluffstuff/JuliaPillow.png";
+        AddImageToDropDown.className = "JuliaPillowDD";
+        ItemImageInDD.appendChild(AddImageToDropDown);
+        //Adds Color to Dropdown
+        var ColorSelectionDD = document.createElement("h6");
+        ColorSelectionDD.innerHTML = "COLOR: " + Selected.color;
+        CartItemDescDD.appendChild(ColorSelectionDD);
+        //Quantity to Dropdown
+        var QuantityDropDown = document.createElement("h6");
+        QuantityDropDown.innerHTML = "QUANTITY: " + Selected.quantity;
+        QuantityDD.appendChild(QuantityDropDown);
+
+        //Add Fill to Dropdown 
+        var FillSelectionDD = document.createElement("h6");
+        FillSelectionDD.innerHTML = "FILL: " + Selected.fill;
+        CartItemDescDD.appendChild(FillSelectionDD);
+        //Remove Cart Item
+        var RemoveItemDropDown = document.createElement("h6");
+        RemoveItemDropDown.innerHTML = "REMOVE ITEM";
+        ItemsInDD.appendChild(RemoveItemDropDown);
+        //Subtotal line in Dropdown
+        LineDD.style.borderBottom = "solid";
+        //Subtotal in Dropdown
+        var SubtotalDropDown = document.getElementById("PriceUpdate");
+        // Get current subtotal
+        //  if (subtotal) new price is current sub + newPrice
+        // else subtotal = new
+        //Price update 
+        let newPrice = parseInt(AddOne.innerHTML) * 45;
+        SubtotalDropDown.innerHTML = "SUBTOTAL: " + newPrice;
+        SubtotalDD.appendChild(SubtotalDropDown);
+        //Remove Nothing is in your cart
+        NothingCart.style.display = "none";
+        //Unhide Buttons fromm dropdown 
+        DDMButtons.style.display = "block";
+        //Adds Items to Local Storage
         var CurrentCart = localStorage.getItem("Selected");
         if (CurrentCart) {
             var LastSelection = JSON.parse(CurrentCart);
@@ -145,21 +199,50 @@ window.onload = () => {
         }
     }
 
-    //Toggle Dropdown Cart 
+    //Toggle Dropdown Cart WONT SHOW DROPDOWN
     let ProductPageTotal = document.getElementById("ProductPageTotal");
     let ShoppingBagIconClick = document.getElementById("ShoppingBagIconClick");
 
-    ShoppingBagIconClick.onclick = function() {
-        if (ShoppingBagIconClick.style.display === 'Block') {
+    ShoppingBagIconClick.onclick = function () {
+        if (ShoppingCartDD.style.display === "block") {
             console.log('disappear');
-            ShoppingBagIconClick.style.display = "none";
-        } else{
+            ShoppingCartDD.style.display = "none";
+        } else {
             console.log('show');
-            ShoppingBagIconClick.style.display = "Block";
+            ShoppingCartDD.style.display = "block";
         }
     }
 
-    ProductPageTotal.onclick = function() {
-        DropDownShoppingCart.style.display = "none";
+    ProductPageTotal.onclick = function () {
+        ShoppingCartDD.style.display = "none";
     }
+
+    //Click through image of pillow 
+    let JuliaPillowImage1 = document.getElementById("JuliaPillowImage1")
+    let JuliaPillowImage2 = document.getElementById("JuliaPillowImage2")
+    let JuliaPillowImage3 = document.getElementById("JuliaPillowImage3")
+
+    JuliaPillowImage1.onclick = function () {
+        JuliaPillowImage.src = "fluffstuff/JuliaPillow.png";
+    }
+
+    JuliaPillowImage2.onclick = function () {
+        JuliaPillowImage.src = "fluffstuff/JuliaPillow2.png";
+    }
+
+    JuliaPillowImage3.onclick = function () {
+        JuliaPillowImage.src = "fluffstuff/JuliaPillow3.png";
+    }
+
+    //Quantity 
+    let QuantityCounter = document.getElementById("QuantityCounter");
+    if (QuantityCounter === null) {
+        QuantityCounter = Selected.quantity;
+        console.log(QuantityCounter);
+    } else {
+        QuantityCounter = QuantityCounter + Selected.quantity;
+        console.log(QuantityCounter);
+    }
+
 }
+

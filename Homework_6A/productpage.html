@@ -62,50 +62,28 @@
         </div>
 
         <!--DropDown Shopping Cart-->
-        <div class="DropDownShoppingCart" id="DropDownShoppingCart">
-            <h6><a>1</a> item in your Cart</h6>
-            <div class="ItemInDropDownCart">
-                <div class="ItemImageInDropDownCart">
-                    <img class="SmallImage" src="fluffstuff/JuliaPillow.png" alt="pillow image" />
+        <div class="DropDownShoppingCart" id="ShoppingCartDD">
+            <div id="NumItemCart"></div>
+            <div class="ItemInDropDownCart" id="ItemsInDD">
+                <h5 id="NothingCart">Nothing is in your cart!</h5>
+                <div class="ItemImageInDropDownCart" id="ItemImageInDD">
                 </div>
-                <div class="DropDownCartItemDesc">
-                    <h6>JULIA COUCH PILLOW</h6>
-                    <h6>COLOR: <a>Morning Haze</a></h6>
-                    <h6>FILL: <a>Memory Foam</a></h6>
-                    <div class="PickQuantity">
-                        <div class="MinusQuantityPP" id="DecreaseOneDDM">
-                            <svg id="MinusIcon" width="13" height="1" viewBox="0 0 13 1" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <path
-                                    d="M12.8587 0H0.141304C0.063587 0 0 0.0473684 0 0.105263V0.894737C0 0.952632 0.063587 1 0.141304 1H12.8587C12.9364 1 13 0.952632 13 0.894737V0.105263C13 0.0473684 12.9364 0 12.8587 0Z"
-                                    fill="white" />
-                            </svg>
-                        </div>
-        
-                        <h5 id="AddOneDDM">1</h5>
-                        <div class="PlusQuantityPP" id="IncreaseOneDDM">
-                            <svg id="PlusIcon" width="13" height="13" viewBox="0 0 13 13" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <path
-                                    d="M12.8587 6H0.141304C0.063587 6 0 6.04737 0 6.10526V6.89474C0 6.95263 0.063587 7 0.141304 7H12.8587C12.9364 7 13 6.95263 13 6.89474V6.10526C13 6.04737 12.9364 6 12.8587 6Z"
-                                    fill="white" />
-                                <path
-                                    d="M7 12.8587L7 0.141304C7 0.063587 6.95263 -2.07054e-09 6.89474 -4.6012e-09L6.10526 -3.91102e-08C6.04737 -4.16408e-08 6 0.0635869 6 0.141304L6 12.8587C6 12.9364 6.04737 13 6.10526 13L6.89474 13C6.95263 13 7 12.9364 7 12.8587Z"
-                                    fill="white" />
-                            </svg>
-                        </div>
-                    </div>
+                <div id="QuantityCounter"></div>
+                <div class="DropDownCartItemDesc" id="CartItemDescDD">
+                    <h6></h6>
+                    <div id="ColorDD"></div>
+                    <div id="FillTypeDD"></div>
+                    <div id="QuantityDD"></div>
                 </div>
                 <div class="DropDownCartRemove">
-                    <h5>$45.00</h5>
-                    <h6>REMOVE ITEM</h6>
+                    <h5></h5>
+                    <div id="RemoveItemDD"></div>
                 </div>
+                <div id="PriceUpdate"></div>
             </div>
-            <div class="SubtotalDDM">
-                <h5 class="Subtotal">SUBTOTAL:</h5>
-                <h5>$45.00</h5>
-            </div>
-            <div class="DDMButtons">
+            <div id="LineDD"></div>
+            <div id="SubtotalDD"></div>
+            <div class="DDMButtons" id="DDMButtons">
                 <div class="CheckoutButton" id="CheckoutButtonDDM">
                     <button class="CheckoutButton" type="button">CHECKOUT</button>
                 </div>
@@ -119,10 +97,11 @@
         <div class="ProductPage" id="ProductPageTotal">
             <div class="ProductPageLeft">
                 <a><span>All Products</span> / <span>Couch Pillows</span> / Julia Couch Pillows</a>
-                <img class="LargeImage" src="fluffstuff/JuliaPillow.png" alt="pillow image" />
+                <img class="LargeImage" id="JuliaPillowImage" src="fluffstuff/JuliaPillow.png" alt="pillow image" />
                 <div class="ProductSmallImage">
-                    <img class="SmallImage" src="fluffstuff/JuliaPillow2.png" alt="pillow image" />
-                    <img class="SmallImage" src="fluffstuff/JuliaPillow3.png" alt="pillow image" />
+                    <img class="SmallImage" id="JuliaPillowImage1" src="fluffstuff/JuliaPillow.png" alt="pillow image" />
+                    <img class="SmallImage" id="JuliaPillowImage2" src="fluffstuff/JuliaPillow2.png" alt="pillow image" />
+                    <img class="SmallImage" id="JuliaPillowImage3" src="fluffstuff/JuliaPillow3.png" alt="pillow image" />
                 </div>
             </div>
             <!-- Product Page Julia Pillow Info -->
