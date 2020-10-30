@@ -129,14 +129,10 @@ window.onload = () => {
     let CartHasItem = document.getElementById("CartHasItem");
     let ShoppingCartDD = document.getElementById("ShoppingCartDD");
     let AddToCartButton = document.getElementById("AddToCartButton");
-    let ItemImageInDD = document.getElementById("ItemImageInDD");
     let SubtotalDD = document.getElementById("SubtotalDD");
-    let QuantityDD = document.getElementById("QuantityDD");
-    let LineDD = document.getElementById("LineDD");
     let DDMButtons = document.getElementById("DDMButtons");
     let NothingCart = document.getElementById("NothingCart");
     let ItemsInDD = document.getElementById("ItemsInDD");
-    let CartItemDescDD = document.getElementById("CartItemDescDD");
 
 
     AddToCartButton.onclick = function (event) {
@@ -145,43 +141,74 @@ window.onload = () => {
         CartHasItem.style.display = "Block";
         console.log(ItemsInDD);
         console.log(AddOne.innerText);
+
         //How many Items in Cart
         var NumItemInDD = document.getElementById("NumItemCart");
         NumItemInDD.innerHTML = Selected.quantity + " item(s) in your cart";
-        //Julia Pillow Renders 
-        var AddImageToDropDown = document.createElement("img");
-        AddImageToDropDown.src = "fluffstuff/JuliaPillow.png";
-        AddImageToDropDown.className = "JuliaPillowDD";
-        ItemImageInDD.appendChild(AddImageToDropDown);
-        //Adds Color to Dropdown
-        var ColorSelectionDD = document.createElement("h6");
-        ColorSelectionDD.innerHTML = "COLOR: " + Selected.color;
-        CartItemDescDD.appendChild(ColorSelectionDD);
-        //Quantity to Dropdown
-        var QuantityDropDown = document.createElement("h6");
-        QuantityDropDown.innerHTML = "QUANTITY: " + Selected.quantity;
-        QuantityDD.appendChild(QuantityDropDown);
-        //Add Fill to Dropdown 
-        var FillSelectionDD = document.createElement("h6");
-        FillSelectionDD.innerHTML = "FILL: " + Selected.fill;
-        CartItemDescDD.appendChild(FillSelectionDD);
-        //Remove Cart Item
-        var RemoveItemDropDown = document.createElement("h6");
-        RemoveItemDropDown.innerHTML = "REMOVE ITEM";
-        ItemsInDD.appendChild(RemoveItemDropDown);
-        //Subtotal line in Dropdown
-        LineDD.style.borderBottom = "solid";
-        //Subtotal in Dropdown
+
+        //Item Image
+        let ItemImgDiv = document.createElement('div');
+        ItemImgDiv.setAttribute('class', 'ItemImg');
+        let ItemImg = document.createElement("img");
+        ItemImg.src = "fluffstuff/JuliaPillow.png";
+        ItemImg.className = "JuliaPillowDD";
+        ItemImgDiv.appendChild(ItemImg);
+
+        // Item Description (Name, Color, fill, quantity)
+        let ItemDescDiv = document.createElement('div');
+        ItemDescDiv.setAttribute('class', 'ItemDesc');
+
+        //Item Name 
+        let ItemName = document.createElement('div');
+        ItemName.setAttribute('class', 'ItemNameDD');
+        ItemName.innerHTML = "JULIA COUCH PILLOW";
+        
+        //Color Div
+        let ColorDiv = document.createElement('div');
+        ColorDiv.setAttribute('class', 'ColorDD');
+        ColorDiv.innerHTML = "Color: " + Selected.color;
+
+        //Fill Div
+        let FillDiv = document.createElement('div');
+        FillDiv.setAttribute('class', 'FillTypeDD');
+        FillDiv.innerHTML= "Fill: " + Selected.fill;
+
+        //Quantity Div
+        let QtyDiv = document.createElement('div');
+        QtyDiv.setAttribute('class', 'QuantityDD');
+        QtyDiv.innerHTML = "Quantity: " + Selected.quantity;
+
+        ItemDescDiv.appendChild(ItemName);
+        ItemDescDiv.appendChild(ColorDiv);
+        ItemDescDiv.appendChild(FillDiv);
+        ItemDescDiv.appendChild(QtyDiv);
+
+        //Remove Button
+        let RemoveDiv = document.createElement('div');
+        RemoveDiv.setAttribute('class', 'RemoveBtn');
+        RemoveDiv.innerHTML="<u>REMOVE ITEM</u>";
+
+        //Add all new items to big div
+        document.getElementById("CartItems").appendChild(ItemImgDiv);
+        document.getElementById("CartItems").appendChild(ItemDescDiv);
+        document.getElementById("CartItems").appendChild(RemoveDiv);
+        console.log("CartItems: ", document.getElementById("CartItems"));
+
+        //Add Line above Subtotal on click
+        var LineDD = document.getElementById("LineDD");
+        LineDD.style.border = "1px solid #000000";
+
+        //Add Subtotal on click
         var SubtotalDropDown = document.getElementById("PriceUpdate");
-        // Get current subtotal
-        //  if (subtotal) new price is current sub + newPrice
-        // else subtotal = new
-        //Price update 
-        let newPrice = parseInt(AddOne.innerHTML) * 45;
-        SubtotalDropDown.innerHTML = "SUBTOTAL: " + newPrice;
+
+        //Change price based on quantity 
+        let NewPrice = parseInt(AddOne.innerHTML) * 45;
+        SubtotalDropDown.innerHTML = "SUBTOTAL: " + NewPrice;
         SubtotalDD.appendChild(SubtotalDropDown);
-        //Remove Nothing is in your cart
+
+        //Remove 'Nothing is in your cart' display
         NothingCart.style.display = "none";
+
         //Unhide Buttons fromm dropdown 
         DDMButtons.style.display = "block";
         //Adds Items to Local Storage

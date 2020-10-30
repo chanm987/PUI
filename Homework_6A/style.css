@@ -709,7 +709,6 @@ form label {
 .DropDownShoppingCart {
     border: 1px solid black;
     width: 566px;
-    height: 653px;
     background-color: white;
     position: absolute;
     right: 0;
@@ -726,6 +725,24 @@ form label {
 .DropDownCartItemDesc h6{
     margin: 0;
     padding: 5px 0;
+}
+
+#CartItems {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.ItemDesc {
+    font-family: 'Varela', sans-serif;
+    font-size: 13px;
+    letter-spacing: 0.1em;
+}
+
+.RemoveBtn {
+    font-family: 'Varela', sans-serif;
+    font-size: 13px;
+    letter-spacing: 0.1em;
 }
 
 .ViewCartButton {
