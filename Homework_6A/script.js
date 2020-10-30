@@ -161,7 +161,6 @@ window.onload = () => {
         var QuantityDropDown = document.createElement("h6");
         QuantityDropDown.innerHTML = "QUANTITY: " + Selected.quantity;
         QuantityDD.appendChild(QuantityDropDown);
-
         //Add Fill to Dropdown 
         var FillSelectionDD = document.createElement("h6");
         FillSelectionDD.innerHTML = "FILL: " + Selected.fill;
