@@ -1,6 +1,6 @@
 window.onload = () => {
 
-    // Change selection color on click
+    // Holding Selection Object
     let Selected = {
         color: "Morning Haze",
         fill: "Memory Foam",
@@ -8,6 +8,10 @@ window.onload = () => {
         price: 0
     };
 
+    //Array for Total Number of Items in Cart 
+    let totalItems = 0 
+
+    // Chang selection color on click
     let BeigeChip = document.getElementById("BeigeChip");
     BeigeChip.onclick = function () {
         BeigeChip.style.border = "2px solid #000000";
@@ -129,7 +133,6 @@ window.onload = () => {
     let CartHasItem = document.getElementById("CartHasItem");
     let ShoppingCartDD = document.getElementById("ShoppingCartDD");
     let AddToCartButton = document.getElementById("AddToCartButton");
-    let SubtotalDD = document.getElementById("SubtotalDD");
     let DDMButtons = document.getElementById("DDMButtons");
     let NothingCart = document.getElementById("NothingCart");
     let ItemsInDD = document.getElementById("ItemsInDD");
@@ -142,9 +145,11 @@ window.onload = () => {
         console.log(ItemsInDD);
         console.log(AddOne.innerText);
 
-        //How many Items in Cart
+        //How many total Items in Cart
+        let newItemQuantity = Selected.quantity;
+        totalItems += newItemQuantity;
         var NumItemInDD = document.getElementById("NumItemCart");
-        NumItemInDD.innerHTML = Selected.quantity + " item(s) in your cart";
+        NumItemInDD.innerHTML = `${totalItems} item(s) in your cart`;
 
         //Item Image
         let ItemImgDiv = document.createElement('div');
@@ -181,7 +186,7 @@ window.onload = () => {
         ItemDescDiv.appendChild(ItemName);
         ItemDescDiv.appendChild(ColorDiv);
         ItemDescDiv.appendChild(FillDiv);
-        ItemDescDiv.appendChild(QtyDiv);
+        // ItemDescDiv.appendChild(QtyDiv);
 
         //Remove Button
         let RemoveDiv = document.createElement('div');
@@ -260,14 +265,15 @@ window.onload = () => {
         JuliaPillowImage.src = "fluffstuff/JuliaPillow3.png";
     }
 
-    //Quantity 
+    //Quantity per item choice 
     let QuantityCounter = document.getElementById("QuantityCounter");
-    if (QuantityCounter === null) {
+    if (QuantityCounter == null) {
         QuantityCounter = Selected.quantity;
-        console.log(QuantityCounter);
+        console.log('high');
     } else {
         QuantityCounter = QuantityCounter + Selected.quantity;
-        console.log(QuantityCounter);
+        console.log('lo');
+
     }
 
 }
