@@ -2,15 +2,19 @@ window.onload = () => {
 
     // Holding Selection Object
     let Selected = {
+        image: "imageplaceholder",
         color: "Morning Haze",
         fill: "Memory Foam",
         quantity: 1,
-        price: 0,
-        image: "imageplaceholder"
+        price: 0.00
     };
-
-    //Array for Total Number of Items in Cart 
+    
+    
+    //Total Number of Items in Cart 
     let totalItems = 0 
+
+    //Total Price added in Cart Subtotal 
+    let totalSubtotal = 0
 
     // Chang selection color on click
     let BeigeChip = document.getElementById("BeigeChip");
@@ -137,6 +141,7 @@ window.onload = () => {
     let DDMButtons = document.getElementById("DDMButtons");
     let NothingCart = document.getElementById("NothingCart");
     let ItemsInDD = document.getElementById("ItemsInDD");
+    let ItemsPriceDD = document.getElementById("ItemsPriceDD");
 
 
     AddToCartButton.onclick = function (event) {
@@ -156,9 +161,11 @@ window.onload = () => {
         let ItemImgDiv = document.createElement('div');
         ItemImgDiv.setAttribute('class', 'ItemImg');
         let ItemImg = document.createElement("img");
-        ItemImg.src = "fluffstuff/JuliaPillow.png";
         ItemImg.className = "JuliaPillowDD";
+        Selected.image = "fluffstuff/JuliaPillow.png";
+        ItemImg.src = Selected.image;
         ItemImgDiv.appendChild(ItemImg);
+
 
         // Item Description (Name, Color, fill, quantity)
         let ItemDescDiv = document.createElement('div');
@@ -187,7 +194,25 @@ window.onload = () => {
         ItemDescDiv.appendChild(ItemName);
         ItemDescDiv.appendChild(ColorDiv);
         ItemDescDiv.appendChild(FillDiv);
-        // ItemDescDiv.appendChild(QtyDiv);
+
+        
+        //Change price based on quantity 
+        let NewPrice = parseFloat(AddOne.innerHTML).toFixed(2) * 45.00;
+        console.log(NewPrice);
+        
+        //Price Div (per selection)
+        let PriceDiv = document.createElement('div');
+        PriceDiv.setAttribute('class', 'ItemsPriceDD');
+        Selected.price = parseFloat(NewPrice).toFixed(2);
+        PriceDiv.innerHTML = Selected.price;
+        // console.log(typeof(Selected.price));
+
+        //Add Subtotal on click
+        let newSubtotal = Selected.price;
+        totalSubtotal += parseFloat(newSubtotal);
+        console.log(totalSubtotal);
+        var SubtotalDropDown = document.getElementById("SubtotalDD");
+        SubtotalDropDown.innerHTML = `SUBTOTAL: ${parseFloat(totalSubtotal).toFixed(2)}`;
 
         //Remove Button
         let RemoveDiv = document.createElement('div');
@@ -197,6 +222,7 @@ window.onload = () => {
         //Add all new items to big div
         document.getElementById("CartItems").appendChild(ItemImgDiv);
         document.getElementById("CartItems").appendChild(ItemDescDiv);
+        document.getElementById("CartItems").appendChild(PriceDiv);
         document.getElementById("CartItems").appendChild(RemoveDiv);
         console.log("CartItems: ", document.getElementById("CartItems"));
 
@@ -204,19 +230,12 @@ window.onload = () => {
         var LineDD = document.getElementById("LineDD");
         LineDD.style.border = "1px solid #000000";
 
-        //Add Subtotal on click
-        var SubtotalDropDown = document.getElementById("PriceUpdate");
-
-        //Change price based on quantity 
-        let NewPrice = parseInt(AddOne.innerHTML) * 45;
-        SubtotalDropDown.innerHTML = "SUBTOTAL: " + NewPrice;
-        SubtotalDD.appendChild(SubtotalDropDown);
-
         //Remove 'Nothing is in your cart' display
         NothingCart.style.display = "none";
 
         //Unhide Buttons fromm dropdown 
         DDMButtons.style.display = "block";
+        
         //Adds Items to Local Storage
         var CurrentCart = localStorage.getItem("Selected");
         if (CurrentCart) {

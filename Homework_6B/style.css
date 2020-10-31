@@ -780,10 +780,6 @@ form label {
     margin-right: 30px;
 }
 
-.DropDownCartRemove h5{
-    justify-items: right;
-}
-
 #CheckoutButtonDDM {
     width: 315px;
     height: 45px;
@@ -804,6 +800,11 @@ form label {
     letter-spacing: 0.1em;
 }
 
+.ItemsPriceDD {
+    font-family: 'Varela', sans-serif;
+    font-size: 13px;
+    letter-spacing: 0.1em;
+}
 
 /* About Us */
 
