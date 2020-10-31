@@ -1,0 +1,1046 @@
+/* interactioon */
+a {
+    text-decoration: none;
+    color: black;
+}
+
+#AboutUsNav {
+    text-decoration: none;
+    color: white;
+}
+
+
+/* Repeat items on each page */
+body{
+    margin: 0;
+}
+
+div {
+    box-sizing: border-box;
+}
+
+/* headers */
+h1 {
+    font-family: 'Abhaya Libre', serif;
+    font-size: 18px;
+    letter-spacing: 0.1em;
+}
+
+h2 {
+    font-family: 'Varela', sans-serif;
+    font-size: 48px;
+    letter-spacing: 0.1em;
+}
+
+h3 {
+    font-family: 'Varela', sans-serif;
+    font-size: 36px;
+    letter-spacing: 0.1em;
+}
+
+h4 {
+    font-family: 'Varela', sans-serif;
+    font-size: 24px;
+    letter-spacing: 0.1em;
+}
+
+h5 {
+    font-family: 'Varela', sans-serif;
+    font-size: 14px;
+    letter-spacing: 0.1em;
+}
+
+h6 {
+    font-family: 'Varela', sans-serif;
+    font-size: 13px;
+    letter-spacing: 0.1em;
+}
+/* Shipping wrapper */
+#ShippingWrapper {
+    height: 45px;
+    background-color: #B29B86;
+    color: white;
+    display: grid;
+    justify-content: center;
+}
+
+#ShippingWrapper h5 {
+    line-height: 45px;
+    margin: 0;
+}
+/* Nav Bar */
+#NavBarWrapper {
+    background: #FBF0E6;
+    font-family: 'Varela', sans-serif;
+    font-size: 14px;
+    display: grid;
+    min-height: 100px;
+    grid-auto-flow: column;
+    grid-template-columns: 3fr 10fr 3fr;
+    gap: 20px;
+    padding: 0 5em;
+}
+
+#NavBarWrapper ul {
+    float: right;
+}
+/* Logo */
+#Logo {
+    box-sizing: border-box;
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    grid-template-columns: auto 1fr;
+}
+
+.LogoText{ 
+    width: 100%;
+}
+
+.LogoImage {
+    display: grid;
+    align-items: center;
+    justify-self: right;
+    height: 32px;
+    width: 34px;
+}
+
+.NavBarSelections ul {
+    display: grid;
+    width: 100%;
+    height: 100%;
+    grid-template-rows: 1fr;
+    grid-template-columns: repeat(5, 1fr);
+    align-items: center;
+    justify-items: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.NavBarSelection li {
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    text-align: center;
+
+}
+
+.NavSide {
+    display: grid;
+    width: 100%;
+    height: 100%;
+    grid-template-rows: 1fr;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+    justify-items: right;
+}
+
+.ShoppingBagIcon {
+   position: relative;
+   top: 5px;
+}
+
+#CartHasItem {
+    position: relative; 
+    margin: 0;
+    z-index: 2;
+    bottom: 13px;
+    left: 6px;
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    background-color: black;
+    display: none;
+}
+
+/* Homepage */
+.BannerImage {
+    width: 100%;
+}
+
+.ImageContainer {
+    vertical-align: center;
+    
+}
+.PillowImage {
+    height: 315px;
+    width: 315px;
+    margin-bottom: 16px;
+}
+
+.PillowImageHP {
+    height: 300px;
+    width: 300px;
+    margin-bottom: 16px;
+    
+}
+
+.ColorImageHP {
+    height: 300px;
+    width: 300px;
+}
+
+.ShopWrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin: 60px;
+}
+
+.ShopByType {
+    margin: 60px;
+}
+.ShopByType h4 {
+    display: flex;
+    justify-content: center;
+    padding: 64px;
+}
+
+.ImageContainer h5 {
+    text-align: center;
+    justify-items: center;
+    width: 100%;
+}
+
+.ShopByColor {
+    margin: 60px;
+}
+
+
+.ShopByColor h4 {
+    display: flex;
+    justify-content: center;
+    padding: 64px;
+}
+
+.ColorWrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+/* Promo Banner */
+.PromoWrapper {
+    display: flex;
+    flex-direction: row;
+    background-color: #FBF0E6;
+    height: 466px;
+    margin-top: 150px;
+}
+
+.PromoDeal {
+    width: 30%;
+    margin: 60px;
+    align-self: center;
+}
+
+.PromoBox {
+    width: 70%;
+}
+
+.PromoHeader {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.PromoDeal {
+    align-self: center;
+    text-decoration: underline;
+}
+
+
+.PromoHeader h4 {
+    margin: 120px 40px 0 0;
+}
+
+.PromoInfo h3 {
+    margin: 0;
+    padding-right: 20px;
+}
+
+.SiteMap {
+    height: 115px;
+    background-color: #B29B86;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    color: white;
+    align-items: center;
+
+}
+
+.Coupon {
+    justify-items: center;
+}
+
+.SiteMap h5{
+    padding: 20px;
+}
+
+/* Product Assorment Page */
+.CouchPillowsTitle {
+    justify-content: center;
+}
+
+.AssortmentBody {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 150px;
+}
+
+.FilterColumn {
+    width: 22%;
+    margin-left: 60px;
+
+}
+
+.ProductAssortment {
+    width: 78%;
+    margin-right: 60px;
+}
+
+.AssortmentBar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 106px 0 20px 0;
+}
+
+.CouchPillowAssortment1 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.CouchPillowAssortment2 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.Options {
+    margin-top: 110px;
+}
+
+.CouchPillowsTitle {
+    text-align: center;
+    width: 91%;
+    border-bottom: 2px solid black;
+    margin: 0 auto;
+}
+
+form { 
+    font-family: 'Varela', sans-serif;
+    font-size: 13px;
+}
+
+select { 
+    font-family: 'Varela', sans-serif;
+    font-size: 13px;
+}
+
+.AssortmentBarBack {
+    font-family: 'Varela', sans-serif;
+    font-size: 13px;
+}
+
+.AssortmentBarBack span {
+    color: #888282;
+}
+
+form label {
+    margin: 10px;
+}
+
+.ColorChips {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.ColorChipBeige {
+    width: 15px;
+    height: 15px;
+    background-color: #EDDEC4;
+    border: 1px solid black;
+    margin: 0 2px 60px 2px;
+}
+
+.ColorChipBlue {
+    width: 15px;
+    height: 15px;
+    background-color: #4876B1;
+    border: 1px solid black;
+    margin: 0 2px 60px 2px;
+}
+
+.ColorChipGray {
+    width: 15px;
+    height: 15px;
+    background-color: #6A6666;
+    border: 1px solid black;
+    margin: 0 2px 60px 2px;
+}
+
+.ColorChipYellow {
+    width: 15px;
+    height: 15px;
+    background-color: #EDD271;
+    border: 1px solid black;
+    margin: 0 2px 60px 2px;
+}
+
+.ImageContainer h5 {
+    margin: 5px;
+}
+
+.FillType h6 {
+    padding-bottom: 15px;
+    width: 231px;
+    margin: 0;
+}
+
+.FillType {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 231px;
+    border-bottom: 2px solid black; 
+    margin: 10px 0;
+}
+
+.Color {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 231px;
+    border-bottom: 2px solid black; 
+    margin: 10px 0;
+}
+
+.Color h6 {
+    padding-bottom: 15px;
+    padding-top: 20px;
+    width: 231px;
+    margin: 0;
+}
+
+.PlusIcon {
+    height: 20px;
+    width: 20px;
+}
+
+.MinusIcon {
+    height: 20px;
+    width: 20px;
+    padding-bottom: 10px;
+}
+
+.ColorChoiceForm {
+    display: none;
+}
+
+/* Product Page */
+
+.ProductPage {
+    display: flex;
+    flex-direction: row;
+    margin: 60px;
+}
+
+.ProductPageLeft {
+    display: flex;
+    flex-direction: column; 
+}
+
+.ProductPageLeft a {
+    font-family: 'Varela', sans-serif;
+    font-size: 13px;
+    letter-spacing: 0.1em;
+}
+
+.ProductPageRight {
+    display: flex;
+    flex-direction: column;
+    margin-left: 100px;
+}
+
+.LargeImage {
+    height: 600px;
+    width: 600px;
+    margin: 15px 0px;
+}
+
+.SmallImage {
+    height: 148px;
+    width: 148px;
+    margin: 5px 5px;
+}
+
+.JuliaPillowDD {
+    height: 148px;
+    width: 148px;
+    margin: 5px 5px;
+}
+
+.JuliaDesc h3 {
+    margin: 30px 0 0 0;
+}
+
+.JuliaDesc h4 {
+    margin: 0;
+}
+
+.JuliaDesc h6 {
+    margin: 20px 0;
+}
+
+.SelectColorTitle {
+    display: flex;
+    flex-direction: row;
+}
+
+.SelectColorTitle h5 {
+    align-self: center;
+    margin-bottom: 5px;
+}
+
+.SelectColorTitle h6 {
+    margin: auto auto 5px 15px;
+}
+
+.SelectColorChip {
+    display: flex;
+    flex-direction: row;
+}
+
+.ColorChipBeigeProduct {
+    width: 45px;
+    height: 45px;
+    background-color: #EDDEC4;
+    border: 2px solid black;
+    margin: 0 4px 0 4px;
+}
+
+.ColorChipBlueProduct {
+    width: 45px;
+    height: 45px;
+    background-color: #4876B1;
+    margin: 0 4px 0 4px;
+}
+
+.ColorChipGrayProduct {
+    width: 45px;
+    height: 45px;
+    background-color: #6A6666;
+    margin: 0 4px 0 4px;
+}
+
+.ColorChipYellowProduct {
+    width: 45px;
+    height: 45px;
+    background-color: #EDD271;
+    margin: 0 4px 0 4px;
+}
+
+.PillowFillTitle {
+    display: flex;
+    flex-direction: row; 
+}
+
+.PillowFillTitle {
+    display: flex;
+    flex-direction: row;
+}
+
+.PillowFillTitle h5 {
+    align-self: center;
+    margin-bottom: 5px;
+}
+
+.PillowFillTitle h6 {
+    margin: auto auto 5px 15px;
+}
+
+.PillowFillButton {
+    font-family: 'Varela', sans-serif;
+    font-size: 13px;
+    letter-spacing: 0.1em; 
+    width: 150px;
+    height: 45px;
+    margin: 3px;
+    background-color: white;
+    color: #888282;
+    border: 1px solid #888282;
+}
+
+#MemoryFoamChoice {
+    background-color: #888282;
+    color: white;
+}
+
+.ProductQuantity h5 {
+    margin-bottom: 5px;
+}
+
+.PickQuantity {
+    display: flex;
+    flex-direction: row;
+}
+
+.MinusQuantityPP {
+    padding: 14px 13px;
+    background-color: #888282;
+}
+
+#MinusIcon {
+    position: relative;
+    bottom: 5px;
+    padding: 0;
+}
+
+.PlusQuantityPP {
+    padding: 14px 13px; 
+    background-color: #888282;
+}
+
+#PlusIcon {
+    position: relative;
+    padding: 0;
+}
+
+
+.PickQuantity h5{
+    margin: 0;
+    padding: 12px 25px;
+    border: 2px solid #888282;
+    align-self: center;
+}
+
+.AddToCartButton {
+    font-family: 'Varela', sans-serif;
+    font-size: 13px;
+    letter-spacing: 0.1em; 
+    width: 315px;
+    height: 45px;
+    margin-top: 30px;
+    color: white;
+    background-color: black;
+}
+
+.CareInfo {
+    display: flex;
+    flex-direction: row;
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
+    justify-content: space-between;
+    margin-top: 100px;
+}
+
+.CareInfo h5 {
+    margin-left: 30px;
+}
+
+.PlusIconCareContent {
+    align-self: center;
+    height: 20px;
+    width: 20px;
+    margin-right: 30px; 
+}
+
+.ContentInfo {
+    display: flex;
+    flex-direction: row;
+    border-bottom: 2px solid black;
+    justify-content: space-between;
+}
+
+.ContentInfo h5 {
+    margin-left: 30px;
+}
+
+/* Bottom Banner for Suggestions */
+.Suggestions {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 120px;
+}
+
+.RightArrow {
+    height: 30px;
+    width: 30px; 
+    align-self: center;
+}
+
+.LeftArrow {
+    height: 30px;
+    width: 30px;
+    align-self: center;
+}
+
+.YouMayLike .ColorChipBlue {
+    margin-bottom: 0;
+}
+
+.YouMayLike .ColorChipBeige {
+    margin-bottom: 0;
+}
+
+.YouMayLike .ColorChipYellow {
+    margin-bottom: 0;
+}
+
+.YouMayLike .ColorChipGray {
+    margin-bottom: 0;
+}
+
+.YouMayLike h4 {
+    border-top: 2px solid black;
+    margin: 0 auto;
+    padding-top: 50px;
+    text-align: center;
+}
+
+/* Drop Down Shopping Cart */
+.DropDownShoppingCart {
+    border: 1px solid black;
+    width: 566px;
+    background-color: white;
+    position: absolute;
+    right: 0;
+    padding: 40px 20px;
+    display: none;
+} 
+
+.ItemInDropDownCart {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.DropDownCartItemDesc h6{
+    margin: 0;
+    padding: 5px 0;
+}
+
+#CartItems {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.ItemDesc {
+    font-family: 'Varela', sans-serif;
+    font-size: 13px;
+    letter-spacing: 0.1em;
+}
+
+.RemoveBtn {
+    font-family: 'Varela', sans-serif;
+    font-size: 13px;
+    letter-spacing: 0.1em;
+}
+
+.ViewCartButton {
+    width: 315px;
+    height: 45px;
+    font-family: 'Varela', sans-serif;
+    font-size: 13px;
+    letter-spacing: 0.1em;
+    background-color:#888282;
+    border: none;
+    color: white;
+    margin: 0 auto;
+
+}
+
+.DDMButtons {
+    display: none;
+}
+.SubtotalDDM {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+
+#SubtotalDD {
+    font-family: 'Varela', sans-serif;
+    font-size: 14px;
+    letter-spacing: 0.1em;
+    margin-left: 350px;
+    margin-top: 20px;
+}
+
+.Subtotal {
+    margin-right: 30px;
+}
+
+.DropDownCartRemove h5{
+    justify-items: right;
+}
+
+#CheckoutButtonDDM {
+    width: 315px;
+    height: 45px;
+    font-family: 'Varela', sans-serif;
+    font-size: 13px;
+    letter-spacing: 0.1em;
+    background-color: black;
+    border: none;
+    color: white;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    margin-top: 120px;
+}
+
+#NumItemCart {
+    font-family: 'Varela', sans-serif;
+    font-size: 13px;
+    letter-spacing: 0.1em;
+}
+
+
+/* About Us */
+
+.AboutUsHeader {
+    text-align: center;
+    margin: 0 60px;
+    border-bottom: 2px solid black;
+}
+
+.AboutUsImage {
+    width: 567px;
+    height: 851px;
+    margin-bottom: 100px;
+}
+
+.AboutUsBody {
+    margin: 150px 114px;
+    display: flex;
+    flex-direction: row;
+}
+
+.AboutUsInfo {
+    margin-left: 100px;
+
+}
+
+.WhoAreWe {
+    margin-bottom: 100px;
+    text-align: justify;
+}
+
+.WhereDoWeProduce {
+    margin-bottom: 100px;
+    text-align: justify;
+}
+
+.WhyShopHere {
+    text-align: justify;
+}
+
+
+/* Shopping Cart */
+
+.ShoppingCartHeader {
+    display: flex;
+    justify-content: center;
+    border-bottom: 2px solid black;
+    margin: 30px 60px;
+}
+
+.ShoppingCartBody a {
+    font-family: 'Varela', sans-serif;
+    font-size: 13px;
+    letter-spacing: 0.1em;
+    color: #888282;
+}
+
+.ShoppingCartBody {
+    margin: 0 60px;
+}
+.ShoppingCartBody a span {
+    color: black;
+}
+
+.ContinueShoppingButton {
+    width: 315px;
+    height: 45px;
+    font-family: 'Varela', sans-serif;
+    font-size: 13px;
+    letter-spacing: 0.1em;
+    background-color: #888282;
+    border: none;
+    color: white;
+}
+
+.CheckoutButton {
+    width: 315px;
+    height: 45px;
+    font-family: 'Varela', sans-serif;
+    font-size: 13px;
+    letter-spacing: 0.1em;
+    background-color: black;
+    border: none;
+    color: white;
+}
+
+.ShoppingCartTop {
+    display: flex;
+    flex-direction: row;
+    margin: 50px 300px; 
+    justify-content: space-evenly;
+}
+
+.ShoppingCartDesc {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 60px;
+    border-bottom: 2px solid black;
+}
+
+.ShoppingCartDesc h6 {
+    margin: 10px 0;
+}
+
+.ShoppingCartDescInfo {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 40%;
+}
+
+.JuliaCouchPillowCartImage {
+    width: 147px;
+    height: 147px;
+    margin: 0 20px 0 0;
+}
+
+.ItemInfo {
+    margin: 0 60px;
+    padding-bottom: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border-bottom: 2px solid black;
+}
+
+.ItemInfoLeft {
+    display: flex;
+    flex-direction: row;
+}
+
+.JuliaCartInfo h6 {
+    margin: 0;
+}
+
+.CartMakeChanges {
+    display: flex;
+    flex-direction: row;
+}
+
+.CartQuantityItemTotal {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 40%;
+}
+
+.CartQuantity a {
+    border: 1px solid black;
+    padding: 10px 30px;
+}
+
+.CartItemPrice {
+    margin: 10px 0 0 0;
+}
+
+.CartQuantity {
+    justify-content: center;   
+}
+
+.CartUpdate {
+    justify-items: center;
+    text-decoration: underline;
+}
+
+.ShoppingCartBottom {
+    display: flex;
+    flex-direction: row;
+    margin: 0 60px 150px 60px;
+    
+}
+
+.CartTotals {
+    width: 40%;
+}
+
+.CartEmptySpacing {
+    width: 60%;
+}
+
+
+.CartSubtotal {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.SalesTaxLeft {
+    display: flex;
+    flex-direction: row;
+}
+
+.CartSalesTax {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.CartShipping {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.CartGrandTotal {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border-top: 2px solid black; 
+}
+
+.CheckoutButtonLarge {
+    width: 500px;
+    height: 45px;
+    font-family: 'Varela', sans-serif;
+    font-size: 13px;
+    letter-spacing: 0.1em;
+    background-color: black;
+    border: none;
+    color: white;
+    margin: 10px 0;
+}
+
+.ContinueShoppingButtonLarge {
+    width: 500px;
+    height: 45px;
+    font-family: 'Varela', sans-serif;
+    font-size: 13px;
+    letter-spacing: 0.1em;
+    background-color: #888282;
+    border: none;
+    color: white;
+}
+
+.PostCostTextBox a {
+    margin: 10px;
+    padding: 10px ;
+    border: 1px solid black;
+}
