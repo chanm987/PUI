@@ -5,7 +5,8 @@ window.onload = () => {
         color: "Morning Haze",
         fill: "Memory Foam",
         quantity: 1,
-        price: 0
+        price: 0,
+        image: "imageplaceholder"
     };
 
     //Array for Total Number of Items in Cart 
