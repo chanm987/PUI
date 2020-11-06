@@ -48,7 +48,7 @@
                 <h3>SHOPPING CART</h3>
             </div>
             <div>               
-                <div class="ShoppingCartBody">
+                <div class="ShoppingCartBody" id=SCBody>
                     <a><span>Shopping Cart</span> > Shopping & Payment Info > Confirmation</a>
                     <div class="ShoppingCartTop">
                         <button class="ContinueShoppingButton" id="ContinueShoppingButton" type="button">CONTINUE SHOPPING</button>
@@ -63,34 +63,27 @@
                         <h6>TOTAL</h6>
                     </div>
                 </div>
-                <div>
+                <div id="SCContainer">
                     <div class="ItemInfo">
                         <div class="ItemInfoLeft">
                             <img class="JuliaCouchPillowCartImage" src="fluffstuff/JuliaPillow.png"/>
                             <div class="JuliaCartInfo">
-                                <h5>JULIA COUCH PILLOW</h5>
-                                <h6>COLOR: <a>Morning Haze</a></h6>
-                                <h6>FILL: <a>Memory Foam</a></h6>
+                                <h5 class="ProductName">JULIA COUCH PILLOW</h5>
+                                <h6 class="ColorName">COLOR: Morning Haze</h6>
+                                <h6 class="FillChoice">FILL: Memory Foam</h6>
                                 <div class="CartMakeChanges">
-                                    <div class="CartRemoveItem">
-                                        <h6>REMOVE ITEM</h6>
-                                    </div>
+                                    <div class="CartRemoveItem">REMOVE ITEM</div>
                                 </div>
                             </div>
                         </div>
                         <div class='CartQuantityItemTotal'>
                             <div class="CartQuantity">
-                                <h6><a>1</a></h6>
+                                <h6 class="CartQuantityNum">1</h6>
                                 <h6 class="CartUpdate">UPDATE</h6>
                             </div>
-                            <div class="CartItemPrice">
-                                <h6><a>$45.00</a></h6>
-                            </div>
-                            <div class="CartItemTotalPrice">
-                                <h4><a>$45.00</a></h4>
-                            </div>
+                            <div class="CartEachItemPrice">$45.00</div>
+                            <div class="CartItemTotalPrice">$45.00</div>
                         </div>
-
                     </div>
                 </div>
             </div>
@@ -137,5 +130,6 @@
                     <h5>CONTACT US</h5>
             </div>
             
+            <script src="./cart.js"></script>
         </body>
     </html>

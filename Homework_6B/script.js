@@ -2,6 +2,7 @@ window.onload = () => {
 
     // Holding Selection Object
     let Selected = {
+        product: "Julia Couch Pillow",
         image: "imageplaceholder",
         color: "Morning Haze",
         fill: "Memory Foam",
@@ -150,6 +151,9 @@ window.onload = () => {
         CartHasItem.style.display = "Block";
         console.log(ItemsInDD);
         console.log(AddOne.innerText);
+        
+        //Product Name
+        let ProductName = Selected.product;
 
         //How many total Items in Cart
         let newItemQuantity = Selected.quantity;

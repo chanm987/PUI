@@ -953,17 +953,26 @@ form label {
     width: 40%;
 }
 
-.CartQuantity a {
+.CartQuantityNum {
     border: 1px solid black;
     padding: 10px 30px;
 }
 
-.CartItemPrice {
-    margin: 10px 0 0 0;
+.CartEachItemPrice {
+    margin: 40px 0 0 0;
+    font-family: 'Varela', sans-serif;
+    font-size: 13px;
+    letter-spacing: 0.1em;
 }
 
 .CartQuantity {
-    justify-content: center;   
+    justify-content: center; 
+}
+
+.CartRemoveItem {
+    font-family: 'Varela', sans-serif;
+    font-size: 14px;
+    letter-spacing: 0.1em;
 }
 
 .CartUpdate {
@@ -986,6 +995,12 @@ form label {
     width: 60%;
 }
 
+.CartItemTotalPrice {
+    margin: 30px 0 0 0;
+    font-family: 'Varela', sans-serif;
+    font-size: 24px;
+    letter-spacing: 0.1em; 
+}
 
 .CartSubtotal {
     display: flex;
