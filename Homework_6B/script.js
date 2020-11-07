@@ -241,18 +241,19 @@ window.onload = () => {
         DDMButtons.style.display = "block";
         
         //Adds Items to Local Storage
-        var CurrentCart = localStorage.getItem("Selected");
+        var CurrentCart = localStorage.getItem("Cart");
+        var LastSelection;
         if (CurrentCart) {
-            var LastSelection = JSON.parse(CurrentCart);
-            LastSelection.CartArray.push(Selected);
-            localStorage.setItem("Selected", JSON.stringify(LastSelection));
+            LastSelection = JSON.parse(CurrentCart);
+           
+            LastSelection.push(Selected);
+            localStorage.setItem("Cart", JSON.stringify(LastSelection));
         } else {
-            let Cart = {
-                CartArray: [Selected]
-            }
-            localStorage.setItem("Selected", JSON.stringify(Cart));
+            localStorage.setItem("Cart", JSON.stringify([Selected]));
         }
+        console.log(LastSelection)
     }
+    console.log(" " + localStorage.getItem("Cart"));
 
     //Toggle Dropdown Cart WONT SHOW DROPDOWN
     let ProductPageTotal = document.getElementById("ProductPageTotal");

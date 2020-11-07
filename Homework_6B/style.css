@@ -924,7 +924,7 @@ form label {
 }
 
 .ItemInfo {
-    margin: 0 60px;
+    margin: 0 60px 20px 60px;
     padding-bottom: 50px;
     display: flex;
     flex-direction: row;
@@ -973,6 +973,7 @@ form label {
     font-family: 'Varela', sans-serif;
     font-size: 14px;
     letter-spacing: 0.1em;
+    text-decoration: underline;
 }
 
 .CartUpdate {
@@ -1017,6 +1018,13 @@ form label {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+}
+
+.CartSalesTaxTotal {
+    font-family: 'Varela', sans-serif;
+    font-size: 14px;
+    letter-spacing: 0.1em;
+    margin: 20px 0 0 0;
 }
 
 .CartShipping {

@@ -64,7 +64,7 @@
                     </div>
                 </div>
                 <div id="SCContainer">
-                    <div class="ItemInfo">
+                    <!-- <div class="ItemInfo">
                         <div class="ItemInfoLeft">
                             <img class="JuliaCouchPillowCartImage" src="fluffstuff/JuliaPillow.png"/>
                             <div class="JuliaCartInfo">
@@ -84,7 +84,7 @@
                             <div class="CartEachItemPrice">$45.00</div>
                             <div class="CartItemTotalPrice">$45.00</div>
                         </div>
-                    </div>
+                    </div> -->
                 </div>
             </div>
             <div class="ShoppingCartBottom">
@@ -93,7 +93,7 @@
                 <div class="CartTotals">
                     <div class="CartSubtotal">
                         <h5>SUBTOTAL</h5>
-                        <h5><a class="CartSubtotalPrice">$45.00</a></h5>
+                        <h5 class="CartSubtotalPrice" id="CartPageSubtotal"></h5>
                     </div>
                     <div class="CartSalesTax">
                         <div class="CartSalesTaxZip">
@@ -104,17 +104,16 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="CartSalesTaxTotal">
-                            <h6>$3.15</h6>
+                        <div class="CartSalesTaxTotal" id="CartPageSalesTax">
                         </div>
                     </div>
                     <div class="CartShipping">
                         <h5>SHIPPING</h5>
-                        <h5><a class="CartShippingTotal">$15.00</a></h5>
+                        <h5><a class="CartShippingTotal" id="CartPageShipping"></a></h5>
                     </div>
                     <div class="CartGrandTotal">
                         <h4>TOTAL</h4>
-                        <h4><a class="CartShippingTotal">$63.15</a></h4>
+                        <h4><a class="CartShippingTotal" id="CartPageGrandTotal"></a></h4>
                     </div>
                     <button class="CheckoutButtonLarge" id="CheckoutButtonLarge" type="button">CHECKOUT</button> 
                     <button class="ContinueShoppingButtonLarge" id="ContinueShoppingButtonLarge" type="button">CONTINUE SHOPPING</button>
