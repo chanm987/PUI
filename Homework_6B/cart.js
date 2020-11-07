@@ -1,25 +1,25 @@
 //Id array for remove 
-var IdArray = [];
+var idArray = [];
 
 //Subtotal 
-var CPSubtotal=0;
+var cPSubtotal=0;
 
 //Sales Tax
-var CPSSalesTax=0;
+var cPSSalesTax=0;
 
 //Shipping
-var CPShipping=0;
+var cPShipping=0;
 
 //Grand Total
-var CPGrandTotal=0;
+var cPGrandTotal=0;
 
-var SelectedArray = JSON.parse(localStorage.getItem('Cart'));
+var selectedArray = JSON.parse(localStorage.getItem('Cart'));
 // console.log(SelectedArray);
 
 
 //access object in local storage
-if (SelectedArray!=null) {
-    for (let i=0; i<SelectedArray.length; i++) {
+if (selectedArray!=null) {
+    for (let i=0; i<selectedArray.length; i++) {
         loadProducts(i);
         // console.log(SelectedArray[i]);
     }
@@ -29,145 +29,145 @@ if (SelectedArray!=null) {
 function loadProducts(index) {
 
     //Large Item Container Per Div 
-    let LargeContainerItemInfo = document.createElement('div');
-    LargeContainerItemInfo.setAttribute('class', 'ItemInfo');
+    let largeContainerItemInfo = document.createElement('div');
+    largeContainerItemInfo.setAttribute('class', 'ItemInfo');
 
     //Item Info on Left 
-    let ItemDescLeft = document.createElement('div');
-    ItemDescLeft.setAttribute('class', 'ItemInfoLeft');
+    let itemDescLeft = document.createElement('div');
+    itemDescLeft.setAttribute('class', 'ItemInfoLeft');
 
     //Item Image 
-    let CartImage = document.createElement("img");
-    CartImage.setAttribute('class', 'JuliaCouchPillowCartImage');
-    CartImage.setAttribute('src', SelectedArray[index].image);
+    let cartImage = document.createElement("img");
+    cartImage.setAttribute('class', 'JuliaCouchPillowCartImage');
+    cartImage.setAttribute('src', selectedArray[index].image);
 
     //Items Full Desc 
-    let CartItemDescDiv = document.createElement('div');
-    CartItemDescDiv.setAttribute('class', 'JuliaCartInfo');
+    let cartItemDescDiv = document.createElement('div');
+    cartItemDescDiv.setAttribute('class', 'JuliaCartInfo');
 
     //Add Product Name 
-    let CartProductName = document.createElement('h5');
-    CartProductName.setAttribute('class', 'ProductName');
-    var CPProductName = SelectedArray[index].product;
-    CartProductName.innerHTML = CPProductName;
+    let cartProductName = document.createElement('h5');
+    cartProductName.setAttribute('class', 'ProductName');
+    var cPProductName = selectedArray[index].product;
+    cartProductName.innerHTML = cPProductName;
 
     //Add Color Selection
-    let CartColorName = document.createElement("h6");
-    CartColorName.setAttribute('class', 'ColorName');
-    var CPColorName = SelectedArray[index].color;
-    CartColorName.innerHTML = 'COLOR: ' + CPColorName;
+    let cartColorName = document.createElement("h6");
+    cartColorName.setAttribute('class', 'ColorName');
+    var cPColorName = selectedArray[index].color;
+    cartColorName.innerHTML = 'COLOR: ' + cPColorName;
 
     //Add Fill Choice
-    let CartFillChoice = document.createElement('h6');
-    CartFillChoice.setAttribute('class', 'FillChoice');
-    var CPFillChoice = SelectedArray[index].fill;
-    CartFillChoice.innerHTML = "FILL: " + CPFillChoice;
+    let cartFillChoice = document.createElement('h6');
+    cartFillChoice.setAttribute('class', 'FillChoice');
+    var cPFillChoice = selectedArray[index].fill;
+    cartFillChoice.innerHTML = "FILL: " + cPFillChoice;
 
     //Make Changes 
-    let MakeChanges = document.createElement('div');
-    MakeChanges.setAttribute('class', 'CartMakeChanges');
+    let makeChanges = document.createElement('div');
+    makeChanges.setAttribute('class', 'CartMakeChanges');
     
     //Remove Item 
-    let CartRemoveAnItem = document.createElement('div');
-    CartRemoveAnItem.setAttribute('class', 'CartRemoveItem');
-    CartRemoveAnItem.innerHTML = "REMOVE ITEM"
-    CartRemoveAnItem.setAttribute('id', index);
+    let cartRemoveAnItem = document.createElement('div');
+    cartRemoveAnItem.setAttribute('class', 'CartRemoveItem');
+    cartRemoveAnItem.innerHTML = "REMOVE ITEM"
+    cartRemoveAnItem.setAttribute('id', index);
 
     //Cart Quantity + Total Price Container
-    let CartQtyTotal = document.createElement('div');
-    CartQtyTotal.setAttribute('class', 'CartQuantityItemTotal');
+    let cartQtyTotal = document.createElement('div');
+    cartQtyTotal.setAttribute('class', 'CartQuantityItemTotal');
 
     //Cart Quantity Container
-    let QtyContainer = document.createElement('div');
-    QtyContainer.setAttribute('class', 'CartQuantity');
+    let qtyContainer = document.createElement('div');
+    qtyContainer.setAttribute('class', 'CartQuantity');
 
     //Cart Quantity
-    let CartQuantityItems = document.createElement('h6');
-    CartQuantityItems.setAttribute('class', 'CartQuantityNum');
-    var CPQuantity = SelectedArray[index].quantity;
-    CartQuantityItems.innerHTML = CPQuantity;
+    let cartQuantityItems = document.createElement('h6');
+    cartQuantityItems.setAttribute('class', 'CartQuantityNum');
+    var cPQuantity = selectedArray[index].quantity;
+    cartQuantityItems.innerHTML = cPQuantity;
 
     //Update Quantity
-    let CartUpdateQty = document.createElement('h6');
-    CartUpdateQty.setAttribute('class', "CartUpdate");
-    CartUpdateQty.innerHTML = "UPDATE";
+    let cartUpdateQty = document.createElement('h6');
+    cartUpdateQty.setAttribute('class', "CartUpdate");
+    cartUpdateQty.innerHTML = "UPDATE";
 
     //Each Item Price
-    let EachItemPrice = document.createElement('div');
-    EachItemPrice.setAttribute('class', 'CartEachItemPrice');
-    EachItemPrice.innerHTML = "$45.00";
+    let eachItemPrice = document.createElement('div');
+    eachItemPrice.setAttribute('class', 'CartEachItemPrice');
+    eachItemPrice.innerHTML = "$45.00";
 
     //Total Price 
-    let TotalPrice = document.createElement('div');
-    TotalPrice.setAttribute('class', 'CartItemTotalPrice');
-    var CPTotalPrice = SelectedArray[index].price;
-    TotalPrice.innerHTML = '$' + CPTotalPrice;
+    let totalPrice = document.createElement('div');
+    totalPrice.setAttribute('class', 'CartItemTotalPrice');
+    var cPTotalPrice = selectedArray[index].price;
+    totalPrice.innerHTML = '$' + cPTotalPrice;
     
 
     //Append my children to the container
-    ItemDescLeft.appendChild(CartImage);
-    CartItemDescDiv.appendChild(CartProductName);
-    CartItemDescDiv.appendChild(CartColorName);
-    CartItemDescDiv.appendChild(CartFillChoice);
-    MakeChanges.appendChild(CartRemoveAnItem);
-    CartItemDescDiv.appendChild(MakeChanges);
-    ItemDescLeft.appendChild(CartItemDescDiv);
-    LargeContainerItemInfo.appendChild(ItemDescLeft);
+    itemDescLeft.appendChild(cartImage);
+    cartItemDescDiv.appendChild(cartProductName);
+    cartItemDescDiv.appendChild(cartColorName);
+    cartItemDescDiv.appendChild(cartFillChoice);
+    makeChanges.appendChild(cartRemoveAnItem);
+    cartItemDescDiv.appendChild(makeChanges);
+    itemDescLeft.appendChild(cartItemDescDiv);
+    largeContainerItemInfo.appendChild(itemDescLeft);
 
     
-    QtyContainer.appendChild(CartQuantityItems);
-    QtyContainer.appendChild(CartUpdateQty);
-    CartQtyTotal.appendChild(QtyContainer);
-    CartQtyTotal.appendChild(EachItemPrice);
-    CartQtyTotal.appendChild(TotalPrice);
-    LargeContainerItemInfo.appendChild(CartQtyTotal);
+    qtyContainer.appendChild(cartQuantityItems);
+    qtyContainer.appendChild(cartUpdateQty);
+    cartQtyTotal.appendChild(qtyContainer);
+    cartQtyTotal.appendChild(eachItemPrice);
+    cartQtyTotal.appendChild(totalPrice);
+    largeContainerItemInfo.appendChild(cartQtyTotal);
 
-    document.getElementById('SCContainer').appendChild(LargeContainerItemInfo);
+    document.getElementById('sCContainer').appendChild(largeContainerItemInfo);
     
 
     //Add Subtotal 
-    let CartPageSubtotal = document.getElementById("CartPageSubtotal");
-    // console.log(CPSubtotal, typeof CPSubtotal)
-    CPSubtotal = CPSubtotal + parseFloat(SelectedArray[index].price);
-    // console.log(CPSubtotal, typeof CPSubtotal)
-    CartPageSubtotal.innerHTML = '$' + CPSubtotal.toFixed(2);
+    let cartPageSubtotal = document.getElementById("cartPageSubtotal");
+    // console.log(cPSubtotal, typeof cPSubtotal)
+    cPSubtotal = cPSubtotal + parseFloat(selectedArray[index].price);
+    // console.log(cPSubtotal, typeof cPSubtotal)
+    cartPageSubtotal.innerHTML = '$' + cPSubtotal.toFixed(2);
 
     //Add Sales Tax 
-    let CartPageSalesTax = document.getElementById("CartPageSalesTax");
-    CPSalesTax = CPSubtotal * 0.06;
-    CartPageSalesTax.innerHTML = '$' + CPSalesTax.toFixed(2);
+    let cartPageSalesTax = document.getElementById("cartPageSalesTax");
+    cPSalesTax = cPSubtotal * 0.06;
+    cartPageSalesTax.innerHTML = '$' + cPSalesTax.toFixed(2);
     
     //Add Shipping Fee 
-    let CartPageShipping = document.getElementById('CartPageShipping');
-    if (CPSubtotal > 75) {
-        CPShipping = 0;
-        CartPageShipping.innerHTML = '$' + CPShipping.toFixed(2);
+    let cartPageShipping = document.getElementById('cartPageShipping');
+    if (cPSubtotal > 75) {
+        cPShipping = 0;
+        cartPageShipping.innerHTML = '$' + cPShipping.toFixed(2);
     } else {
-        CPShipping = 15;
-        CartPageShipping.innerHTML = '$' + CPShipping.toFixed(2);
+        cPShipping = 15;
+        cartPageShipping.innerHTML = '$' + cPShipping.toFixed(2);
     }
     
     //Add Grand Total
-    let CartPageGrandTotal = document.getElementById('CartPageGrandTotal');
-    CPGrandTotal = CPSubtotal + CPSalesTax + CPShipping;
-    CartPageGrandTotal.innerHTML = '$' + CPGrandTotal.toFixed(2);
+    let cartPageGrandTotal = document.getElementById('cartPageGrandTotal');
+    cPGrandTotal = cPSubtotal + cPSalesTax + cPShipping;
+    cartPageGrandTotal.innerHTML = '$' + cPGrandTotal.toFixed(2);
 
 
 
 
 }
 
-var RemoveItemsList = document.getElementsByClassName('CartRemoveItem');
+var removeItemsList = document.getElementsByClassName('CartRemoveItem');
 // console.log(localStorage.getItem("Cart"))
-for (let i=0; i<RemoveItemsList.length; i++) {
-    RemoveItemsList[i].addEventListener('click', function() {
+for (let i=0; i<removeItemsList.length; i++) {
+    removeItemsList[i].addEventListener('click', function() {
         var currentId = this.id;
         // console.log("index" + currentId)
-        console.log(SelectedArray)
-        SelectedArray.splice(0,1);
-        console.log(SelectedArray)
+        console.log(selectedArray)
+        selectedArray.splice(0,1);
+        console.log(selectedArray)
         
-        localStorage.setItem('Cart', JSON.stringify(SelectedArray));
+        localStorage.setItem('Cart', JSON.stringify(selectedArray));
         location.reload();
     });
 }

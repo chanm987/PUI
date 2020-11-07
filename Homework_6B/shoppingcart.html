@@ -51,7 +51,9 @@
                 <div class="ShoppingCartBody" id=SCBody>
                     <a><span>Shopping Cart</span> > Shopping & Payment Info > Confirmation</a>
                     <div class="ShoppingCartTop">
-                        <button class="ContinueShoppingButton" id="ContinueShoppingButton" type="button">CONTINUE SHOPPING</button>
+                        <form class="CtnShopping" id="CtnShoppingBtn" action="productpage.html">
+                            <button class="ContinueShoppingButton" id="ContinueShoppingButton" type="submit">CONTINUE SHOPPING</button>
+                        </form>
                         <button class="CheckoutButton" id="CheckoutButton" type="button">CHECKOUT</button>    
                     </div>
                 </div>
@@ -63,7 +65,7 @@
                         <h6>TOTAL</h6>
                     </div>
                 </div>
-                <div id="SCContainer">
+                <div id="sCContainer">
                     <!-- <div class="ItemInfo">
                         <div class="ItemInfoLeft">
                             <img class="JuliaCouchPillowCartImage" src="fluffstuff/JuliaPillow.png"/>
@@ -93,7 +95,7 @@
                 <div class="CartTotals">
                     <div class="CartSubtotal">
                         <h5>SUBTOTAL</h5>
-                        <h5 class="CartSubtotalPrice" id="CartPageSubtotal"></h5>
+                        <h5 class="CartSubtotalPrice" id="cartPageSubtotal"> </h5>
                     </div>
                     <div class="CartSalesTax">
                         <div class="CartSalesTaxZip">
@@ -104,19 +106,21 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="CartSalesTaxTotal" id="CartPageSalesTax">
+                        <div class="CartSalesTaxTotal" id="cartPageSalesTax"> 
                         </div>
                     </div>
                     <div class="CartShipping">
                         <h5>SHIPPING</h5>
-                        <h5><a class="CartShippingTotal" id="CartPageShipping"></a></h5>
+                        <h5><a class="CartShippingTotal" id="cartPageShipping"> </a></h5>
                     </div>
                     <div class="CartGrandTotal">
                         <h4>TOTAL</h4>
-                        <h4><a class="CartShippingTotal" id="CartPageGrandTotal"></a></h4>
+                        <h4><a class="CartShippingTotal" id="cartPageGrandTotal"></a> </h4>
                     </div>
                     <button class="CheckoutButtonLarge" id="CheckoutButtonLarge" type="button">CHECKOUT</button> 
-                    <button class="ContinueShoppingButtonLarge" id="ContinueShoppingButtonLarge" type="button">CONTINUE SHOPPING</button>
+                    <form class="CtnShopping" id="CtnShoppingBtn" action="productpage.html">
+                        <button class="ContinueShoppingButtonLarge" id="ContinueShoppingButtonLarge" type="submit">CONTINUE SHOPPING</button>
+                    </form>
                     <br>
                 </div>
             </div>
