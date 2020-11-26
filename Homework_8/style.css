@@ -1,0 +1,42 @@
+/* Fonts */
+
+@font-face {
+    font-family: 'Moon Flower';
+    src: url(MoonFlower.tff);
+}
+
+@font-face {
+    font-family: 'Avenir';
+    src: url(Avenir-Book-01.ttf);
+}
+
+@font-face {
+    font-family: 'Avenir Light';
+    src: url(Avenir-Light-07.ttf);
+}
+
+h1 {
+    font-family: 'Moon Flower';
+    font-size: 36px;
+}
+
+h2 {
+    font-family: 'Avenir';
+    font-size: 14px;
+    letter-spacing: 0.1em;
+}
+
+h3 {
+    font-family: 'Avenir Light';
+    font-size: 14px;
+    letter-spacing: 0.1em;
+}
+
+/* Current Landscape */
+
+/*Washing Machine Image */
+
+#WashingMachine {
+    width: 480px;
+    height: 317px;
+}
