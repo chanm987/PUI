@@ -37,7 +37,7 @@
 /* Container Margin */
 .container-fluid {
     margin-top: 70px;
-    margin-bottom: 200px;
+    margin-bottom: 100px;
 }
 
 
@@ -58,7 +58,7 @@ hr.BreakLine {
 #howItsMadeText {
     position: absolute;
     z-index: 1;
-    top: 2300px;
+    top: 3800px;
 
 }
 
@@ -66,6 +66,15 @@ hr.BreakLine {
 #wavesBreak {
     margin-top: 200px;
     margin-bottom: 200px;
+}
+
+/* Wildlife */
+#groupText {
+    display: none;
+}
+
+#fishInside {
+    display: none;
 }
 
 /* So what can I do body */
@@ -78,7 +87,7 @@ hr.BreakLine {
 #upButtonPlacement {
     position: absolute;
     z-index: 2;
-    top: 6600px;
+    top: 8600px;
 }
 #upButton {
     font-family: 'Avenir';
