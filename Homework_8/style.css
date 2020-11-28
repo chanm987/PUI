@@ -6,8 +6,8 @@
 }
 
 @font-face {
-    font-family: 'Avenir';
-    src: url(Avenir-Book-01.ttf);
+    font-family: 'Avenir Heavy';
+    src: url(Avenir-Heavy-05.ttf);
 }
 
 @font-face {
@@ -15,48 +15,72 @@
     src: url(Avenir-Light-07.ttf);
 }
 
-h1 {
-    font-family: 'Moon Flower';
-    font-size: 36px;
-}
 
-h2 {
-    font-family: 'Avenir';
-    font-size: 14px;
-    letter-spacing: 0.1em;
-}
-
-h3 {
+.BodyText {
     font-family: 'Avenir Light';
     font-size: 14px;
     letter-spacing: 0.1em;
 }
 
-/* Current Landscape */
-/*Tshirt Image*/
-#TShirt {
-    height: 290px;
-    width: 356px;
+.HeaderText {
+    font-family: 'Moon Flower';
+    font-size: 36px;
 }
 
-/* Factory Image */
-#Factory {
+.SubheaderText {
+    font-family: 'Avenir Heavy';
+    font-size: 14px;
+    letter-spacing: 0.1em; 
+}
+
+
+/* Container Margin */
+.container-fluid {
+    margin-top: 70px;
+    margin-bottom: 200px;
+}
+
+
+/* Break line style */
+hr.BreakLine {
+    border: 1px dashed black;
+}
+
+/* Nav Bar */
+#navBar {
+    font-family: 'Avenir Light';
+    font-size: 14px;
+    letter-spacing: 0.1em;
+}
+
+
+/* How It's Made Text Placement */
+#howItsMadeText {
+    position: absolute;
+    z-index: 1;
+    top: 2300px;
 
 }
 
-/*Washing Machine Image */
-#WashingMachine {
-    width: 480px;
-    height: 317px;
+/* Waves */
+#wavesBreak {
+    margin-top: 200px;
+    margin-bottom: 200px;
 }
 
-/* Clothing Rack */
-#DressRack {
-    width: 360px;
-    height: 249px;
+/* So what can I do body */
+#dressRack {
+    margin-bottom: 50px;
 }
 
-#UpButton {
+
+/*Take me Back Button */
+#upButtonPlacement {
+    position: absolute;
+    z-index: 2;
+    top: 6600px;
+}
+#upButton {
     font-family: 'Avenir';
     font-size: 14px;
     letter-spacing: 0.1em;
