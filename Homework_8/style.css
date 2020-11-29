@@ -54,18 +54,20 @@ hr.BreakLine {
 }
 
 
-/* How It's Made Text Placement */
-#howItsMadeText {
-    position: absolute;
-    z-index: 1;
-    top: 3800px;
+/* Tshirt */
+#tShirt {
+    margin-bottom: 50px;
+}
 
+/* Washing Machine */
+#washingMachine {
+    margin-bottom: 50px;
 }
 
 /* Waves */
 #wavesBreak {
-    margin-top: 200px;
-    margin-bottom: 200px;
+    margin-top: 50px;
+    margin-bottom: 50px;
 }
 
 /* Wildlife */
@@ -77,6 +79,35 @@ hr.BreakLine {
     display: none;
 }
 
+/* Earth */
+#earthText1 {
+    display: none;
+}
+
+#earthText2 {
+    display: none;
+}
+
+#earthText3 {
+    display: none;
+}
+
+#earthText4 {
+    display: none;
+}
+
+/* Earth Button */
+#viewAllStats {
+    font-family:'Avenir';
+    font-size: 14px;
+    letter-spacing: 0.1em;
+    height: 50px;
+    width: 200px;
+    border: 3px solid #759370;
+    background-color: white;
+    
+}
+
 /* So what can I do body */
 #dressRack {
     margin-bottom: 50px;
@@ -84,16 +115,11 @@ hr.BreakLine {
 
 
 /*Take me Back Button */
-#upButtonPlacement {
-    position: absolute;
-    z-index: 2;
-    top: 8600px;
-}
 #upButton {
     font-family: 'Avenir';
     font-size: 14px;
     letter-spacing: 0.1em;
-    height: 74px;
-    width: 240px;
-    background-color: #AFDCD1;
+    height: 50px;
+    width: 200px;
+    background-color: #afdcd1;
 }
