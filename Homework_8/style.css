@@ -33,17 +33,25 @@
     letter-spacing: 0.1em; 
 }
 
+/* smooth scrolling */
+html {
+    scroll-behavior: smooth;
+  }
+
 /* Container Margin */
 .container-fluid {
     margin-top: 70px;
-    margin-bottom: 100px;
+    margin-bottom: 70px;
+} 
+
+/* Anchor for scrolling */
+a:hover {
+    color: black;
 }
 
-/* Break line style */
-hr.BreakLine {
-    border: 1px dashed black;
+a {
+    color: black;
 }
-
 /* Nav Bar */
 #navBar {
     font-family: 'Avenir Light';
@@ -86,6 +94,27 @@ hr.BreakLine {
     margin-bottom: 50px;
 }
 
+/* Fish switch at breakpoint */
+@media only screen and (max-width: 768px) {
+    #wildlifeFish {
+        display: none;
+    }
+
+    #smallWildlife {
+        display: block;
+    }
+  }
+
+  @media only screen and (min-width: 768px) {
+    #wildlifeFish {
+        display: block;
+    }
+
+    #smallWildlife {
+        display: none;
+    }
+  }
+
 /* Wildlife */
 #groupText {
     display: none;
@@ -94,6 +123,39 @@ hr.BreakLine {
 #fishInside {
     display: none;
 }
+
+/* Small Wildlife */
+#smallWildlife {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+#smallFishFacts {
+    display: none;
+}
+
+/* Globe image switch at breakpoint */
+@media only screen and (max-width: 1000px) {
+    #earthFacts {
+        display: none;
+    }
+    #viewAllStats{
+        display: none;
+    }
+    #smallGlobe {
+        display: block;
+    }
+  }
+
+  @media only screen and (min-width: 1000px) {
+    #earthFacts {
+        display: block;
+    }
+
+    #smallGlobe {
+        display: none;
+    }
+  }
 
 /* Earth */
 #earthText1 {
@@ -124,6 +186,10 @@ hr.BreakLine {
     
 }
 
+/* Small Earth */
+#smallGlobeFact1, #smallGlobeFact2, #smallGlobeFact3, #smallGlobeFact4 {
+    display: none;
+}
 /* So what can I do body */
 #rackSolution {
     margin-bottom: 50px;
@@ -136,5 +202,9 @@ hr.BreakLine {
     letter-spacing: 0.1em;
     height: 50px;
     width: 200px;
+    background-color: white;
+}
+
+#upButton:hover {
     background-color: #afdcd1;
 }

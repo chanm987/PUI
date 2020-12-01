@@ -7,12 +7,14 @@ jQuery(function() {
     mainImageTL.to(mainImageEmpty, 7, {css:{opacity: 1}});
     /* Star flash */
     let flashingStars = document.getElementsByClassName("starClass");
+    let flashingStarsTL = new TimelineMax({paused: true, repeat: -1, scrollTrigger:{trigger:".starClass"}, yoyo: true});
     TweenMax.set(flashingStars, {css:{opacity:0}});
-    gsap.to($(".starClass"), {css:{opacity:1}, stagger: {each: 0.3, from:"random"}, duration: 0.8});
+    flashingStarsTL.to($(".starClass"), {css:{opacity:1}, stagger: {each: 0.3, from:"random"}, duration: 0.8});
     /* Dot flash */
     let flashingDot = document.getElementsByClassName("dotClass");
+    let flashingDotTL = new TimelineMax({paused: true, repeat: -1, scrollTrigger:{trigger:".dotClass"}, yoyo: true});
     TweenMax.set(flashingDot, {css:{opacity:0}});
-    gsap.to($(".dotClass"), {css:{opacity:1}, stagger: {each: 0.3, from:"random"}, duration: 0.8});
+    flashingDotTL.to($(".dotClass"), {css:{opacity:1}, stagger: {each: 0.3, from:"random"}, duration: 0.8});
     /* Tshirt Image color fill */
     let tShirtEmpty = document.getElementById("tShirtFill");
     let tShirtTL = new TimelineMax({paused: true, scrollTrigger:{trigger:"#tShirtFill", start: "50% bottom"}});
@@ -81,6 +83,15 @@ jQuery(function() {
         fishInnerBody.style.display = "none";
         fishStat.style.display = "none";
     }
+    /* Small Wildlife Fish on click */
+    let smallFishImage = document.getElementById("smallFishInside");
+    let smallFishInnerBody = document.getElementById("smallFishFacts");
+    smallFishImage.onmousedown = function () {
+        smallFishInnerBody.style.display = "Block";
+    }
+    smallFishImage.onmouseup = function () {
+        smallFishInnerBody.style.display = "none";
+    }
     /* Earth Stat show on click (one by one) */
     let earthStat1 = document.getElementById("earthText1");
     let earthStat2 = document.getElementById("earthText2");
@@ -148,6 +159,40 @@ jQuery(function() {
         earthStatButton.style.backgroundColor = "white";
         earthStatButton.style.color = "black";
     }
+    /* Small Earth Fill */
+    let sGlobe = document.getElementById("smallGlobeOutline");
+    let sGlobeLand1 = document.getElementById("land1");
+    let sGlobeLand2 = document.getElementById("land2");
+    let sGlobeLand3 = document.getElementById("land3");
+    let sGlobeLand4 = document.getElementById("land4");
+    let sGlobeSelf = document.getElementById("smallGlobeSelf");
+    let sGlobeFact1 = document.getElementById("smallGlobeFact1");
+    let sGlobeFact2 = document.getElementById("smallGlobeFact2");
+    let sGlobeFact3 = document.getElementById("smallGlobeFact3");
+    let sGlobeFact4 = document.getElementById("smallGlobeFact4");
+    sGlobe.onmouseover = function () {
+        sGlobeLand1.style.fill = "#758370";
+        sGlobeLand2.style.fill = "#758370";
+        sGlobeLand3.style.fill = "#758370";
+        sGlobeLand4.style.fill = "#758370";
+        sGlobeSelf.style.fill = "#97B4CF";
+        sGlobeFact1.style.display = "Block";
+        sGlobeFact2.style.display = "Block";
+        sGlobeFact3.style.display = "Block";
+        sGlobeFact4.style.display = "Block";
+    }
+    sGlobe.onmouseleave = function () {
+        sGlobeLand1.style.fill = "white";
+        sGlobeLand2.style.fill = "white";
+        sGlobeLand3.style.fill = "white";
+        sGlobeLand4.style.fill = "white";
+        sGlobeSelf.style.fill = "white";
+        sGlobeFact1.style.display = "none";
+        sGlobeFact2.style.display = "none";
+        sGlobeFact3.style.display = "none";
+        sGlobeFact4.style.display = "none";
+    }
+
     /* Clothing Rack Solution Color Fill */
     let clothingRackEmpty = document.getElementById("clothingSolutionFill");
     let clothingRackTL = new TimelineMax({paused: true, scrollTrigger:{trigger:"#clothingSolutionFill", start: "50% bottom"}});
