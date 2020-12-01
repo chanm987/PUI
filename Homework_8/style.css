@@ -2,17 +2,17 @@
 
 @font-face {
     font-family: 'Moon Flower';
-    src: url(MoonFlower.tff);
+    src: url(Fonts/MoonFlower/MoonFlower.ttf);
 }
 
 @font-face {
     font-family: 'Avenir Heavy';
-    src: url(Avenir-Heavy-05.ttf);
+    src: url(Fonts/Avenir/Avenir-Heavy-05.ttf);
 }
 
 @font-face {
     font-family: 'Avenir Light';
-    src: url(Avenir-Light-07.ttf);
+    src: url(Fonts/Avenir/Avenir-Light-07.ttf);
 }
 
 
@@ -33,13 +33,11 @@
     letter-spacing: 0.1em; 
 }
 
-
 /* Container Margin */
 .container-fluid {
     margin-top: 70px;
     margin-bottom: 100px;
 }
-
 
 /* Break line style */
 hr.BreakLine {
@@ -53,6 +51,9 @@ hr.BreakLine {
     letter-spacing: 0.1em;
 }
 
+.NavBarText {
+    padding: 10px 0 10px 0;
+}
 
 /* Tshirt */
 #tShirt {
@@ -61,6 +62,21 @@ hr.BreakLine {
 
 /* Washing Machine */
 #washingMachine {
+    margin-bottom: 50px;
+}
+
+
+/* How its made container */
+#howItsMadeContainer {
+    margin: 0;
+}
+#cloudsToMoveContainer {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+/* Factory Image */
+#factoryImage {
     margin-bottom: 50px;
 }
 
@@ -109,10 +125,9 @@ hr.BreakLine {
 }
 
 /* So what can I do body */
-#dressRack {
+#rackSolution {
     margin-bottom: 50px;
 }
-
 
 /*Take me Back Button */
 #upButton {
