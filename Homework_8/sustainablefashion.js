@@ -5,12 +5,12 @@ jQuery(function() {
     let mainImageTL = new TimelineMax({paused:true, scrollTrigger:{trigger:"#colorImageFill"}});
     TweenMax.set(mainImageEmpty, {css:{opacity:0}});
     mainImageTL.to(mainImageEmpty, 7, {css:{opacity: 1}});
-    /* Star flash */
+    /* Star flash in main image */
     let flashingStars = document.getElementsByClassName("starClass");
     let flashingStarsTL = new TimelineMax({paused: true, repeat: -1, scrollTrigger:{trigger:".starClass"}, yoyo: true});
     TweenMax.set(flashingStars, {css:{opacity:0}});
     flashingStarsTL.to($(".starClass"), {css:{opacity:1}, stagger: {each: 0.3, from:"random"}, duration: 0.8});
-    /* Dot flash */
+    /* Dot flash in main image */
     let flashingDot = document.getElementsByClassName("dotClass");
     let flashingDotTL = new TimelineMax({paused: true, repeat: -1, scrollTrigger:{trigger:".dotClass"}, yoyo: true});
     TweenMax.set(flashingDot, {css:{opacity:0}});
@@ -24,7 +24,7 @@ jQuery(function() {
     let washingMachineSpin = document.getElementById("machineSpin");
     let washingMachineTL = new TimelineMax({paused: true, repeat: -1, scrollTrigger:{trigger: "#washingMachine", start: "50% bottom"}});
     washingMachineTL.to(washingMachineSpin, {duration: 3, rotation:"+=360", transformOrigin:"50% 50%", ease: "Power1.easeInOut"});
-    /* Cloud move */
+    /* Make Clouds move */
     let cloud2 = document.getElementById("cloudToMove2");
     let cloud3 = document.getElementById("cloudToMove3");
     let cloud4 = document.getElementById("cloudToMove4");
@@ -47,7 +47,7 @@ jQuery(function() {
     cloud3TL.to(cloud3, 40, {css:{x:"-1400"}});
     cloud5TL.to(cloud5, 60, {css:{x:"-1500"}}, 0.2);
     cloud6TL.to(cloud6, 55, {css:{x:"-1500"}});
-    /* Small Fish move */
+    /* Small Fish movement */
     let fishMove1 = document.getElementById("fish1");
     let fishMove2 = document.getElementById("fish2");
     let fishMove3 = document.getElementById("fish3");
@@ -83,7 +83,7 @@ jQuery(function() {
         fishInnerBody.style.display = "none";
         fishStat.style.display = "none";
     }
-    /* Small Wildlife Fish on click */
+    /* Small Wildlife Fish on click show facts */
     let smallFishImage = document.getElementById("smallFishInside");
     let smallFishInnerBody = document.getElementById("smallFishFacts");
     smallFishImage.onmousedown = function () {
@@ -95,7 +95,7 @@ jQuery(function() {
     smallFishImage.onmouseup = function () {
         smallFishInnerBody.style.display = "none";
     }
-    /* Earth Stat show on click (one by one) */
+    /* Earth Stat show facts on hover (one by one) */
     let earthStat1 = document.getElementById("earthText1");
     let earthStat2 = document.getElementById("earthText2");
     let earthStat3 = document.getElementById("earthText3");
@@ -136,7 +136,7 @@ jQuery(function() {
         earthImage4.style.fill = "white";
         earthStat4.style.display = "none";
     }
-    /* Earth Stat show on click (button) */
+    /* Earth Stat show on click all together (button) */
     let earthStatButton = document.getElementById("viewAllStats");
     earthStatButton.onmousedown = function () {
         earthImage1.style.fill = "#758370";
@@ -162,7 +162,7 @@ jQuery(function() {
         earthStatButton.style.backgroundColor = "white";
         earthStatButton.style.color = "black";
     }
-    /* Small Earth Fill */
+    /* Small Earth Fill color on hover */
     let sGlobe = document.getElementById("smallGlobeOutline");
     let sGlobeLand1 = document.getElementById("land1");
     let sGlobeLand2 = document.getElementById("land2");
