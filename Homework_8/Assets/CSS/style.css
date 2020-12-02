@@ -2,17 +2,17 @@
 
 @font-face {
     font-family: 'Moon Flower';
-    src: url(Fonts/MoonFlower/MoonFlower.ttf);
+    src: url(./../Fonts/MoonFlower/MoonFlower.ttf);
 }
 
 @font-face {
     font-family: 'Avenir Heavy';
-    src: url(Fonts/Avenir/Avenir-Heavy-05.ttf);
+    src: url(./../Fonts/Avenir/Avenir-Heavy-05.ttf);
 }
 
 @font-face {
     font-family: 'Avenir Light';
-    src: url(Fonts/Avenir/Avenir-Light-07.ttf);
+    src: url(./../Fonts/Avenir/Avenir-Light-07.ttf);
 }
 
 
