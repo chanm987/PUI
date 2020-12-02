@@ -89,6 +89,9 @@ jQuery(function() {
     smallFishImage.onmousedown = function () {
         smallFishInnerBody.style.display = "Block";
     }
+    smallFishInnerBody.onmouseup = function () {
+        smallFishInnerBody.style.display = "none";
+    }
     smallFishImage.onmouseup = function () {
         smallFishInnerBody.style.display = "none";
     }
